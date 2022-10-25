@@ -1,7 +1,7 @@
 var next_click=document.querySelectorAll(".next_button");
 var main_form=document.querySelectorAll(".main");
-var step_list = document.querySelectorAll(".progress-bar li");
-var num = document.querySelector(".step-number");
+var step_list=document.querySelectorAll(".progress-bar li");
+var num=document.querySelector(".step-number");
 let formnumber=0;
 
 next_click.forEach(function(next_click_form){
@@ -67,12 +67,12 @@ function progress_forward(){
     // }); 
     
      
-    num.innerHTML = formnumber+1;
+    num.innerHTML=formnumber+1;
     step_list[formnumber].classList.add('active');
 }  
 
 function progress_backward(){
-    var form_num = formnumber+1;
+    var form_num=formnumber+1;
     step_list[form_num].classList.remove('active');
     num.innerHTML = form_num;
 } 

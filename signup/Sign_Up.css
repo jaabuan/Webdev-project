@@ -329,11 +329,6 @@ select{
     color:blue;
 }
 
-
-
-
-
-
 .checkmark__circle {
   stroke-dasharray: 166;
   stroke-dashoffset: 166;
@@ -382,15 +377,6 @@ select{
     box-shadow: inset 0px 0px 0px 30px #7ac142;
   }
 }
-
-
-
-
-
-
-
-
-
 
 .warning{
     border:1px solid red !important;
