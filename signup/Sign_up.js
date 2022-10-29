@@ -4,6 +4,101 @@ var step_list=document.querySelectorAll(".progress-bar li");
 var num=document.querySelector(".step-number");
 let formnumber=0;
 
+function formValidation()
+{
+var ufname = document.registration.fname;
+var ulname = document.registration.lname;
+var umname = document.registration.mname;
+var uid = document.registration.id;
+var uyearLevel = document.registration.yearLevel;
+var uprogram = document.registration.program;
+}function allLetter(ufname){
+var letters = /^[A-Za-z]+$/;
+if(ufname.value.match(letters))
+{
+return true;
+}
+else
+{
+alert('First name must have alphabet characters only');
+ufname.focus();
+return false;
+}
+}
+function allLetter(ulname){
+var letters = /^[A-Za-z]+$/;
+if(ulname.value.match(letters))
+{
+return true;
+}
+else
+{
+alert('Last name must have alphabet characters only');
+ulname.focus();
+return false;
+}
+}
+function allLetter(umname){
+var letters = /^[A-Za-z]+$/;
+if(umname.value.match(letters))
+{
+return true;
+}
+else
+{
+alert('Middle name must have alphabet characters only');
+umname.focus();
+return false;
+}
+}function uid_validation(uid)
+{   
+var numbers = /^[0-9]+$/;
+if(uid.value.match(numbers))
+{
+return true;
+}
+else
+{
+alert('Student Number code must have numeric characters only');
+uid.focus();
+return false;
+}
+}
+function uid_validation1(uid,my)
+{
+if (uid == 0 ||uid >= my || uid < mx)
+{
+alert("Student Number should not be empty / length be "+my);
+passid.focus();
+return false;
+}
+return true;
+}
+function yearselect(uyearLevel)
+{
+if(uyearLevel.value == "Default")
+{
+alert('Select your current year level');
+uyearLevel.focus();
+return false;
+}
+else
+{
+return true;
+}
+}function programselect(uprogram)
+{
+if(uprogram.value == "Default")
+{
+alert('Select your program');
+uprogram.focus();
+return false;
+}
+else
+{
+return true;
+}
+}
 next_click.forEach(function(next_click_form){
     next_click_form.addEventListener('click',function(){
         if(!validateform()){
